@@ -755,14 +755,14 @@ const THRESHOLD = 9.1864;
 
 const QUESTIONS = [
   {
-    id: 'Q1', label: 'Gender', dimension: 'Demographic Profile', importance: 4.160,
+    id: 'Q1', label: 'Gender', text: 'What is your gender?', dimension: 'Demographic Profile', importance: 4.160,
     options: [
       { label: 'Female', coef: 0 },
       { label: 'Male', coef: -0.1664 }
     ]
   },
   {
-    id: 'Q3', label: 'Work Experience', dimension: 'Demographic Profile', importance: 3.090,
+    id: 'Q3', label: 'Work Experience', text: 'How many years of total work experience do you have?', dimension: 'Demographic Profile', importance: 3.090,
     options: [
       { label: '0–3 years', coef: 0 },
       { label: '4–7 years', coef: -0.00309 },
@@ -771,7 +771,7 @@ const QUESTIONS = [
     ]
   },
   {
-    id: 'Q4', label: 'Company Business Line', dimension: 'Organizational Context', importance: 8.220,
+    id: 'Q4', label: 'Company Business Line', text: 'What is the primary business line or sector in which your company operates?', dimension: 'Organizational Context', importance: 8.220,
     options: [
       { label: 'Information Technology', coef: 0 },
       { label: 'Education', coef: 0.1644 },
@@ -787,7 +787,7 @@ const QUESTIONS = [
     ]
   },
   {
-    id: 'Q5', label: 'Position in Company', dimension: 'Organizational Context', importance: 3.410,
+    id: 'Q5', label: 'Position in Company', text: 'What is your current position or role within the company?', dimension: 'Organizational Context', importance: 3.410,
     options: [
       { label: 'Business Owner', coef: 0 },
       { label: 'Manager', coef: 0.1023 },
@@ -795,7 +795,7 @@ const QUESTIONS = [
     ]
   },
   {
-    id: 'Q6', label: 'Business Life Cycle Stage', dimension: 'Organizational Context', importance: 6.140,
+    id: 'Q6', label: 'Business Life Cycle Stage', text: 'Which stage of the business life cycle best describes your company?', dimension: 'Organizational Context', importance: 6.140,
     options: [
       { label: 'Low (1–22)', coef: 0 },
       { label: 'Medium Low (23–44)', coef: 0.3684 },
@@ -805,16 +805,16 @@ const QUESTIONS = [
     ]
   },
   {
-    id: 'Q7', label: 'Number of Personnel', dimension: 'Organizational Context', importance: 6.050,
+    id: 'Q7', label: 'Number of Personnel', text: 'Approximately how many employees currently work in your company?', dimension: 'Organizational Context', importance: 6.050,
     options: [
       { label: 'Less than 10', coef: 0 },
-      { label: '11–50', coef: 0.121 },
-      { label: '51–250', coef: -0.0363 },
+      { label: 'Between 11–50', coef: 0.121 },
+      { label: 'Between 51–250', coef: -0.0363 },
       { label: 'More than 250', coef: -0.7865 }
     ]
   },
   {
-    id: 'Q8', label: 'Big Data Knowledge Level', dimension: 'Data Literacy', importance: 8.640,
+    id: 'Q8', label: 'Big Data Knowledge Level', text: 'How would you describe your level of knowledge and understanding of big data and its applications in business?', dimension: 'Data Literacy', importance: 8.640,
     options: [
       { label: 'Very Low', coef: 0 },
       { label: 'Basic Level', coef: 0.9504 },
@@ -824,7 +824,7 @@ const QUESTIONS = [
     ]
   },
   {
-    id: 'Q9', label: 'Big Data Usage Frequency', dimension: 'Data Literacy', importance: 6.140,
+    id: 'Q9', label: 'Big Data Usage Frequency', text: 'To what extent does your company currently use big data in its business operations and decision-making processes?', dimension: 'Data Literacy', importance: 6.140,
     options: [
       { label: 'Never', coef: 0 },
       { label: 'Rarely', coef: -0.1842 },
@@ -833,70 +833,70 @@ const QUESTIONS = [
     ]
   },
   {
-    id: 'Q10', label: 'Data Science Expert on Team', dimension: 'Data Literacy', importance: 3.250,
+    id: 'Q10', label: 'Data Science Expert on Team', text: 'Does your company have employees with specialized knowledge or expertise in data science, big data analytics, or related analytical fields?', dimension: 'Data Literacy', importance: 3.250,
     options: [
       { label: 'Yes', coef: 0 },
       { label: 'No', coef: 0.4225 }
     ]
   },
   {
-    id: 'Q11', label: 'Data Platform Services Used', dimension: 'Technology & Infrastructure', importance: 12.410,
+    id: 'Q11', label: 'Data Platform Services Used', text: 'To what extent does your company use data platforms or data-related digital services to collect, store, process, and analyze data?', dimension: 'Technology & Infrastructure', importance: 12.410,
     options: [
       { label: 'Big Data Platforms', coef: 0 },
       { label: 'Data Mining Software', coef: 1.6133 },
-      { label: 'Cloud-Based Analytics', coef: 2.3579 },
+      { label: 'Cloud-Based Data Analytics Services', coef: 2.3579 },
       { label: 'Advanced Analytics Software', coef: 1.9856 },
       { label: 'Other', coef: -0.2482 }
     ]
   },
   {
-    id: 'Q12', label: 'Big Data Analysis & Monitoring', dimension: 'Learning Practices', importance: 16.270,
+    id: 'Q12', label: 'Big Data Analysis & Monitoring', text: 'To what extent does your business use the monitoring of big data analysis results to improve its business processes?', dimension: 'Learning Practices', importance: 16.270,
     options: [
-      { label: 'Strongly Disagree', coef: 0 },
-      { label: 'Disagree', coef: -2.7659 },
-      { label: 'Neutral', coef: 1.3016 },
-      { label: 'Agree', coef: -1.3016 },
-      { label: 'Strongly Agree', coef: 1.6011 }
+      { label: 'Never', coef: 0 },
+      { label: 'Rarely', coef: -2.7659 },
+      { label: 'Sometimes', coef: 1.3016 },
+      { label: 'Frequently', coef: -1.3016 },
+      { label: 'Very frequently', coef: 1.6011 }
     ]
   },
   {
-    id: 'Q13', label: 'Big Data Collaboration', dimension: 'Learning Practices', importance: 24.020,
+    id: 'Q13', label: 'Big Data Collaboration', text: 'To what extent are big data analysis results communicated across departments to support organizational collaboration?', dimension: 'Learning Practices', importance: 24.020,
     options: [
-      { label: 'Strongly Disagree', coef: 0 },
-      { label: 'Disagree', coef: 3.3628 },
-      { label: 'Neutral', coef: -4.0834 },
-      { label: 'Agree', coef: 2.8824 },
-      { label: 'Strongly Agree', coef: 4.0834 }
+      { label: 'Never', coef: 0 },
+      { label: 'Rarely', coef: 3.3628 },
+      { label: 'Sometimes', coef: -4.0834 },
+      { label: 'Frequently', coef: 2.8824 },
+      { label: 'Very frequently', coef: 4.0834 }
     ]
   },
   {
-    id: 'Q14', label: 'Big Data Technology Usage', dimension: 'Learning Practices', importance: 23.650,
+    id: 'Q14', label: 'Big Data Technology Usage', text: 'To what extent does your business employ advanced technologies and analytical tools in its use of big data?', dimension: 'Learning Practices', importance: 23.650,
     options: [
-      { label: 'Strongly Disagree', coef: 0 },
-      { label: 'Disagree', coef: -1.6555 },
-      { label: 'Neutral', coef: 1.6555 },
-      { label: 'Agree', coef: 7.095 },
-      { label: 'Strongly Agree', coef: 8.041 }
+      { label: 'Not at all', coef: 0 },
+      { label: 'To a small extent', coef: -1.6555 },
+      { label: 'To a moderate extent', coef: 1.6555 },
+      { label: 'To a great extent', coef: 7.095 },
+      { label: 'To a very great extent', coef: 8.041 }
     ]
   },
   {
-    id: 'Q15', label: 'Data Security Awareness', dimension: 'Learning Practices', importance: 20.630,
+    id: 'Q15', label: 'Data Security Awareness', text: 'To what extent are employees informed about data security and privacy practices?', dimension: 'Learning Practices', importance: 20.630,
     options: [
-      { label: 'Strongly Disagree', coef: 0 },
-      { label: 'Disagree', coef: 2.8882 },
-      { label: 'Neutral', coef: 5.3638 },
-      { label: 'Agree', coef: 7.2205 },
-      { label: 'Strongly Agree', coef: 8.8709 }
+      { label: 'Not at all', coef: 0 },
+      { label: 'To a small extent', coef: 2.8882 },
+      { label: 'To a moderate extent', coef: 5.3638 },
+      { label: 'To a great extent', coef: 7.2205 },
+      { label: 'To a very great extent', coef: 8.8709 }
     ]
   },
   {
-    id: 'Q16', label: 'Data-Driven Decision Making', dimension: 'Learning Practices', importance: 17.790,
+    id: 'Q16', label: 'Data-Driven Decision Making', text: 'To what extent are employees encouraged to base their decisions on data?', dimension: 'Learning Practices', importance: 17.790,
     options: [
-      { label: 'Strongly Disagree', coef: 0 },
-      { label: 'Disagree', coef: -1.2453 },
-      { label: 'Neutral', coef: -3.9138 },
-      { label: 'Agree', coef: -0.7116 },
-      { label: 'Strongly Agree', coef: 1.6011 }
+      { label: 'Not at all', coef: 0 },
+      { label: 'To a small extent', coef: -1.2453 },
+      { label: 'To a moderate extent', coef: -3.9138 },
+      { label: 'To a great extent', coef: -0.7116 },
+      { label: 'To a very great extent', coef: 1.6011 }
     ]
   }
 ];
@@ -933,8 +933,8 @@ function renderQuestions() {
         <div class="q-header">
           <div class="q-num">${String(globalIdx).padStart(2,'0')}</div>
           <div>
-            <div class="q-text">${q.label}</div>
-            <div class="q-importance">Importance weight: ${q.importance.toFixed(3)}</div>
+            <div class="q-text">${q.text || q.label}</div>
+            <div class="q-importance">${q.label} · Importance weight: ${q.importance.toFixed(3)}</div>
           </div>
         </div>
         <div class="options-grid">`;
